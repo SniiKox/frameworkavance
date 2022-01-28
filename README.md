@@ -1,6 +1,6 @@
 Projet réalisé dans le cadre du module Framework avancé
 
-Action a réaliser après avoir récupéré le projet : 
+Action a réaliser après avoir récupéré le projet de la branche master : 
 
 A la racine du projet appfront, exécuter les commandes ci-dessous : 
 
