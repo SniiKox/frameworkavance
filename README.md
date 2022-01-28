@@ -9,6 +9,7 @@ A la racine du projet appfront, exécuter les commandes ci-dessous :
 
 A la racine du projet appback, exécuter les commandes ci-dessous : 
 
+- mvn clean install
 - mvn spring-boot:run
 
 Rendez-vous sur l'adresse suivante : 
