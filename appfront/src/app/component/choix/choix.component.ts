@@ -20,12 +20,19 @@ export class ChoixComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  tri(arr, name) {
+    return arr.filter(el => {
+      return el.original_title === name;
+    });
+  }
+
   onSubmit() {
       this.search = (<HTMLInputElement>document.getElementById("search")).value
       this.sublist.push(
         this.filmService.getFilms(this.search).subscribe(
           (res) => {
             this.films = res;
+            this.films = this.tri(this.films, this.search)
             console.log(this.films)
           },
           (err) => {
