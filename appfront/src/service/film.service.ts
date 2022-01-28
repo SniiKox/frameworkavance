@@ -8,7 +8,7 @@ export class FilmService {
   constructor(private http: HttpClient) {}
 
   getFilms(choice: string) {
-    return this.http.get(`http://localhost:8081/${choice}`, {
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=a66216d24c5d970cb5cb3e4ae1ba1a16&language=en-US&query=${choice}&page=1&include_adult=false`, {
       responseType: "text",
     });
   }

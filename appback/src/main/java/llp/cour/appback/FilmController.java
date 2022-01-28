@@ -14,11 +14,11 @@ public class FilmController {
     private FilmService filmService;
     
     
-    @GetMapping("/{name}")
+    @GetMapping("/films/{name}")
     @ResponseBody
     public List<Object> getFilmByName(@PathVariable("name") String name) {
     	
-    	return filmService.getFilmByName(name);
+    	return filmService.getFilmByName("test");
 
     }
 

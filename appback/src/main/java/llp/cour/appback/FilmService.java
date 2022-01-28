@@ -24,9 +24,9 @@ public class FilmService {
     	String url = "https://api.themoviedb.org/3/search/movie?api_key=a66216d24c5d970cb5cb3e4ae1ba1a16&language=en-US&query=" + name + "&page=1&include_adult=false";
     	
     	RestTemplate restTemplate = new RestTemplate();
-    	Object[] films = restTemplate.getForObject(url, Object[].class);
-        
-        return Arrays.asList(films);
+    	Object films = restTemplate.getForObject(url, Object[].class);
+        System.out.println(films);
+    	return Arrays.asList(films);
     }
 
 

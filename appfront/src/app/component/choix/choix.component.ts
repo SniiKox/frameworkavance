@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
 import { Subscription } from "rxjs";
 import { FilmService } from 'src/service/film.service';
-import { search } from 'src/model/search';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: "app-choix",
@@ -9,6 +9,7 @@ import { search } from 'src/model/search';
   styleUrls: ["./choix.component.scss"],
 })
 export class ChoixComponent implements OnInit {
+  search: string = '';
   public films: any;
   public missingField = false;
   private sublist: Array<Subscription> = [];
@@ -17,18 +18,12 @@ export class ChoixComponent implements OnInit {
     private filmService: FilmService
   ) {}
 
-  @Input() search: search;
-  @Output() searchChange = new EventEmitter();
-
   ngOnInit(): void {}
 
-  choose($event) {
-    this.search.name = $event;
-  }
-
-  submit() {
+  onSubmit() {
+      this.search = (<HTMLInputElement>document.getElementById("search")).value
       this.sublist.push(
-        this.filmService.getFilms(this.search.name).subscribe(
+        this.filmService.getFilms(this.search).subscribe(
           (res) => {
             this.films = res;
             console.log(this.films)
