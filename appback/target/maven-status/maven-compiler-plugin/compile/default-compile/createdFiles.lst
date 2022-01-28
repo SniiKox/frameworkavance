@@ -1,1 +1,6 @@
+llp\cour\appback\FilmEntity.class
 llp\cour\appback\AppbackApplication.class
+llp\cour\appback\FilmController.class
+llp\cour\appback\Film.class
+llp\cour\appback\FilmService.class
+llp\cour\appback\FilmRepository.class

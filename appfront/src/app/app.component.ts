@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { transaction } from "src/model/transaction";
+import { search } from 'src/model/search';
 
 @Component({
   selector: "app-root",
@@ -9,18 +9,15 @@ import { transaction } from "src/model/transaction";
 export class AppComponent implements OnInit {
   title = "appfront";
 
-  public transaction: transaction;
+  public search: search;
 
   ngOnInit() {
-    this.transaction = {
-      choice: null,
-      sugar: null,
-      price: null,
-      state: "CHOOSING"
+    this.search = {
+      name: null
     }
   }
 
-  showWaiting($event) {    
-    this.transaction = $event
+  showWaiting($event) {
+    this.search = $event
   }
 }

@@ -28,8 +28,8 @@ describe("ChoixComponent", () => {
     fixture = TestBed.createComponent(ChoixComponent);
 
     // fixture.debugElement.nativeElement.querySelector("#boisson").click();
-    component.transaction.choice = "café";
-    component.transaction.sugar = null;
+    // component.transaction.choice = "café";
+    // component.transaction.sugar = null;
     fixture.debugElement.nativeElement.querySelector(".valider").click();
 
     fixture.detectChanges();
